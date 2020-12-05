@@ -16,6 +16,11 @@ public class hotelController {
         this.hotelRepo = hotelRepo;
     }
 
+    @RequestMapping("/dodawanie")
+    public String dodajemy() {
+        return "dodaj";
+    }
+
     @RequestMapping("/dodaj")
     public String dodajemyDane(
             @RequestParam("nazwa") String nazwa,
