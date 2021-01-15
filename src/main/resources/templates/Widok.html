@@ -2,11 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="pl">
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>Dodany nocleg</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-Dodałeś następujące dane:
+<p align="center"> <h2>Dodałeś następujące dane:</h2></p>
 <br>
-<span th:text=${hotel}>...</span><br>
+<table class="table table-striped">
+    <tr><th>Nazwa</th><th>Telefon</th><th>E-mail</th><th>Liczba gwiazdek</th><th>Opis</th></tr>
+    <tr>
+        <td th:text="${hotel.nazwa}"></td>
+        <td th:text="${hotel.telefon}"></td>
+        <td th:text="${hotel.email}"></td>
+        <td th:text="${hotel.liczbaGwiazdek}"></td>
+        <td th:text="${hotel.opis}"></td></tr>
+</table>
+<p><a href="#" th:href="@{/pokaz}" class="btn btn-secondary">Pokaż wszystkie noclegi</a></p>
 </body>
 </html>
