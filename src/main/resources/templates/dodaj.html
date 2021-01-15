@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Dodawanie hotelu</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<form action="http://localhost:8080/dodaj">
-    <table>
-        <tr>
-            <td>Podaj nazwę</td>
-            <td><input name="nazwa"></td>
+<p align="center"> <h2>Dodawanie hotelu</h2></p> <br>
+<form th:action="@{/dodaj}">
+    <table class="table table-striped">
+        <tr class="d-flex">
+            <td class="col-2">Podaj nazwę</td>
+            <td class="col-2"><input name="nazwa"></td>
         </tr>
-        <tr>
-            <td>Podaj telefon</td>
-            <td><input name="telefon"></td>
+        <tr class="d-flex">
+            <td class="col-2">Podaj telefon</td>
+            <td class="col-2"><input name="telefon"></td>
         </tr>
-        <tr>
-            <td>Podaj email</td>
-            <td><input name="email"></td>
+        <tr class="d-flex">
+            <td class="col-2">Podaj email</td>
+            <td class="col-2"><input name="email"></td>
         </tr>
-        <tr>
-            <td>Podaj liczbę gwiazdek</td>
-            <td> <input name="liczbaGwiazdek"> </td>
+        <tr class="d-flex">
+            <td class="col-2">Podaj liczbę gwiazdek</td>
+            <td class="col-2"> <input name="liczbaGwiazdek"> </td>
         </tr>
-        <tr>
-            <td>Podaj opis</td>
-            <td><input name="opis"></td>
+        <tr class="d-flex">
+            <td class="col-2">Podaj opis</td>
+            <td class="col-2"><input name="opis"></td>
         </tr>
         <tr>
             <td colspan="2"><input type="submit"></td>

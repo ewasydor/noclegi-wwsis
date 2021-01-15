@@ -21,7 +21,7 @@
 </table>
 
 <table class="table table-striped">
-    <tr><td> Wyszukaj hotele wg nazwy</td><td><form action="http://localhost:8080/wyszukaj"><input name="kryterium"></td><td><input type="submit"></form></td></tr>
+    <tr><td> Wyszukaj hotele wg nazwy</td><td><form th:action="@{/wyszukaj}"><input name="kryterium"></td><td><input type="submit"></form></td><td><a href="#" th:href="@{/dodawanie}" class="btn btn-secondary"><i class="fa fa-trash-o fa-lg"></i>Dodaj obiekt</a></td></tr>
 
 </table>
 
