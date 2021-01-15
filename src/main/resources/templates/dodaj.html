@@ -7,6 +7,7 @@
 </head>
 <body>
 <p align="center"> <h2>Dodawanie hotelu</h2></p> <br>
+<p><a href="#" th:href="@{/pokaz}" class="btn btn-secondary">Wstecz</a></p>
 <form th:action="@{/dodaj}">
     <table class="table table-striped">
         <tr class="d-flex">
@@ -31,6 +32,7 @@
         </tr>
         <tr>
             <td colspan="2"><input type="submit"></td>
+        </tr>
     </table>
 </form>
 </body>
