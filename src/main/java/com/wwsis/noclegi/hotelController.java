@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class hotelController {
     private HotelRepo hotelRepo;
+    private EmailSender emailSender;
 
     @Autowired
-    public hotelController(HotelRepo hotelRepo) {
+    public hotelController(HotelRepo hotelRepo, EmailSender emailSender) {
         this.hotelRepo = hotelRepo;
+        this.emailSender = emailSender;
     }
 
     @RequestMapping("/dodawanie")
@@ -35,6 +37,7 @@ public class hotelController {
         System.out.println(hotel);
         hotelRepo.save(hotel);
         model.addAttribute("hotel", hotel);
+        emailSender.send("pai.wyklad.lab@gmail.com", "Dodano nowy hotel", hotel.toString());
         return "Widok";
     }
 
